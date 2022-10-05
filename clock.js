@@ -2,7 +2,9 @@ const body = document.body
 
 const calculadora = document.createElement('div')
 
-var h1 = document.createTextNode("CALCULADORA")
+var nm = document.createTextNode("Calculadora")
+var nm2 = document.createTextNode("Resultado")
+
 
 const input1 = document.createElement('input')
 const input2 = document.createElement('input') 
@@ -12,7 +14,7 @@ const divi = document.createElement('button')
 const men = document.createElement('button')
 const mult = document.createElement('button')
 
-const campoResultado = document.createElement('div')
+const resposta = document.createElement('div')
 const boto = document.createElement('div')
 
 body.appendChild(calculadora)
@@ -20,7 +22,7 @@ body.appendChild(calculadora)
 
 
 
-calculadora.appendChild(h1)
+calculadora.appendChild(nm)
 
 boto.appendChild(soma)
 boto.appendChild(divi)
@@ -29,7 +31,8 @@ boto.appendChild(mult)
 calculadora.appendChild(boto)
 calculadora.appendChild(input1)
 calculadora.appendChild(input2)
-calculadora.appendChild(campoResultado)
+calculadora.appendChild(nm2)
+calculadora.appendChild(resposta)
 
 
 var plus = document.createTextNode("+")
@@ -52,15 +55,15 @@ input2.style.marginTop = "10px"
 input2.style.width = "50px"
 input2.style.height = "50px"
 
-campoResultado.style.display = "flex"
-campoResultado.style.marginTop = "30px"
-campoResultado.style.marginBottom ="30px"
-campoResultado.style.height = "125px"
-campoResultado.style.width = "250px"
-campoResultado.style.backgroundColor = "black"
-campoResultado.style.justifyContent = "center"
-campoResultado.style.alignItems = "center"
-campoResultado.style.color = "white"
+resposta.style.display = "flex"
+resposta.style.marginTop = "30px"
+resposta.style.marginBottom ="30px"
+resposta.style.height = "125px"
+resposta.style.width = "250px"
+resposta.style.backgroundColor = "black"
+resposta.style.justifyContent = "center"
+resposta.style.alignItems = "center"
+resposta.style.color = "white"
 
 
 calculadora.style.display = "flex"
@@ -124,25 +127,25 @@ mult.style.borderRadius = "200px"
 
 
 soma.addEventListener('click', () => {
-    campoResultado.innerHTML = ""
+    resposta.innerHTML = ""
     var resultado =  document.createTextNode(parseFloat(input1.value) + parseFloat(input2.value))
-    campoResultado.appendChild(resultado)
+    resposta.appendChild(resultado)
 })
 
 men.addEventListener('click', () => {   
-    campoResultado.innerHTML = ""
+    resposta.innerHTML = ""
     var resultado =  document.createTextNode(parseInt(input1.value)-parseInt(input2.value))
-    campoResultado.appendChild(resultado)
+    resposta.appendChild(resultado)
 })
 
 divi.addEventListener('click', () => {   
-    campoResultado.innerHTML = ""
+    resposta.innerHTML = ""
     var resultado =  document.createTextNode(parseInt(input1.value)/parseInt(input2.value))
-    campoResultado.appendChild(resultado)
+    resposta.appendChild(resultado)
 })
 
 mult.addEventListener('click', () => {
-    campoResultado.innerHTML = ""
+    resposta.innerHTML = ""
     var resultado =  document.createTextNode(parseInt(input1.value)*parseInt(input2.value))
-    campoResultado.appendChild(resultado)
+    resposta.appendChild(resultado)
 })
