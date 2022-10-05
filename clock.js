@@ -77,17 +77,18 @@ calculadora.style.fontSize = "30px"
 calculadora.style.borderRadius = "300px"
 calculadora.style.color = "black"
 
-//Estilizando o body:
+
 body.style.display = "flex"
 body.style.justifyContent = "center"
 body.style.alignItems = "center"
 body.style.height = "100vh"
 
-//Estilizando os botões:
+
 boto.style.display = "flex"
 boto.style.alignItems = "flex-start"
 boto.style.justifyContent = "space-between"
 boto.style.width = "300px"
+
 
 
 
